@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title> Story </title>
+		<link rel="stylesheet" type="text/css" href="finalproj.css">
+		<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+		<script src="processing-1.4.1.js"></script>
+		<script type="text/processing" data-processing-target="mycanvas"></script>
+		<link rel="stylesheet" type="text/css" href="finalproj.css">
+		
+		<script type="text/processing" data-processing-target="mycanvas">
+			void setup(){
+				size(1300,750);
+				background(0,39,105);
+			}
+		</script>
+	</head>
+	<body>
+		<h1> HOW TO PLAY </h1>
+		<h2> The objective of this game is to collect 50 points and defeat the Bean men to save Superman! </h2>
+		<button class ="btn" id = "button3" onclick= "window.location.href='finalproject.html'">LET'S PLAY</button>
+		<img src = "mouse.png" id = "mouse" alt = "mouse"></img>
+		<h3>Left click to shoot lasers</h3>
+		<img src = "wkey.png" id = "wkey" alt = "w"></img>
+		<h4>Click the W key to jump</h4>
+		<img src = "coin.png" id = "coin" alt = "coin"></img>
+		<h5>1 coin = 10 points <br><br><br><br><br><br> Collect 50 points to save Superman! </h5>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>

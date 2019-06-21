@@ -1,0 +1,441 @@
+<html>
+	<head>
+		<title> Team Beyonce's Final Project </title>
+		<style>
+			.mainstyle {
+				position: absolute;
+				top: 180px;
+				right: 35%;
+				/*margin-left:-20px;*/
+				width: 300px;
+				padding: 25px;
+			}
+			
+			#kim {
+				width: 80px;
+				height: 170px;
+				position: absolute;
+				right: 700px;
+				top: 225px;
+			}
+		</style>
+		<script src="processing-1.4.1.js"></script>
+		<script>
+        var jumped = false;    
+		function keyDownHandler(event){
+			var keyPressed = String.fromCharCode(event.keyCode);
+			
+			if (keyPressed == "W"){
+				jump();
+			}
+		}
+		
+		function jump() {
+            jumped = true;
+			document.getElementById("kim").style.top = "30px";
+			setTimeout(function(){
+				document.getElementById("kim").style.top = "225px";
+                jumped = false;
+			}, 1500); 
+		}
+		
+		</script>
+		<script type="text/processing" data-processing-target="teambeyonce">
+		var girl;
+		var myBeanMan;
+		var beanManPositionX = 1000;
+		var coinLayer;
+		var coinPositionX = 1000;
+		var laser;
+		var laserPositionX = 0;
+		var building;
+		var buildingPositionX = 0;
+		var yPosition = 550;
+		var points = 0;
+		var lives = 3;
+		var backgroundRed = 9;
+		var backgroundGreen = 91;
+		var backgroundBlue = 153;
+		var buildingRed = 5;
+		var buildingGreen = 73;
+		var buildingBlue = 122;
+		var scoreBoardX = 20; 
+
+		void setup(){
+			document.addEventListener("keydown",keyDownHandler,false);
+		
+			size (1000, 490);
+			background (backgroundRed, backgroundGreen, backgroundBlue);
+			
+			//building
+			fill (buildingRed,buildingGreen,buildingBlue);
+			rect (1, 400, 1200, 500);
+			
+			//sidewalk
+			fill (143, 135, 135);
+			rect (1,yPosition,1300,100);
+			girl = new Girl(100,200);
+			
+			//weapon = new Weapon(girl.xPosition+50,girl.yPosition);
+			size(1200,600);
+			background(23, 0, 99);
+			
+			beanMan = [];
+				for(var i=0; i<4; i++) {
+					beanMan.push(new BeanMan(900+(i*400), 455, 6));
+            }
+			coinLayer = [];
+			    for(var i=0; i<5; i++) {
+					coinLayer.push(new Coins(1000+(i*600), 250, random(200,250), random (200,600), 1.5));
+            }
+			building = [];	
+				for(var i=0; i<9; i++) {
+					building.push(new Building (0+(i*20), 550, 10, 1, 4, 255, 255, 255)); 
+					building.push(new Building (0+(i*40), 550, 10, 1, 4, 255, 255, 255)); 
+					building.push(new Building (0+(i*60), random (100,250), random (35,50), 200, .7, buildingRed, buildingGreen, buildingBlue));
+					building.push(new Building (0+(i*80), 550, 10, 1, 4, 255, 255, 255)); 
+					building.push(new Building (0+(i*100), random (100,250), random (35,50), 200, .7, buildingRed, buildingGreen, buildingBlue));
+					building.push(new Building (0+(i*120), random (100,250), random (35,50), 200, .7, buildingRed, buildingGreen, buildingBlue));
+					building.push(new Building (0+(i*140), 550, 10, 1, 4, 255, 255, 255)); 
+					building.push(new Building (0+(i*160), random (100,250), random (35,50), 200, .7, buildingRed, buildingGreen, buildingBlue));
+					building.push(new Building (0+(i*180), random (100,250), random (35,50), 200, .7, buildingRed, buildingGreen, buildingBlue));
+				}
+			laser = [];
+		}
+		
+		void mouseClicked () {
+            if (jumped)
+                return;
+                
+			laser.push(new Laser(girl.xPosition + 40, 493, 10, 5, 8));
+		}
+		
+		void draw(){
+			if (points != 100){
+		
+				noStroke ();
+				background (backgroundRed, backgroundGreen, backgroundBlue);			
+			
+				//background block to cover bottom
+				fill (buildingRed,buildingGreen,buildingBlue);
+				rect (1, 300, 1300, 500);
+				
+				//grey sidewalk
+				fill (143, 135, 135);
+				rect (1,560,1300,60);
+
+				for (var i = 0; i< building.length; i ++) {
+					building[i].drawBuilding ();
+					building[i].move ();
+				}            
+				
+                if (lives != 0 ) {
+				    for (var i = 0; i < beanMan.length; i ++) {
+					   beanMan[i].changeLives();
+					   beanMan[i].drawBean ();
+					   beanMan[i].move();
+				    }
+				
+				    for (var i = 0; i < coinLayer.length; i++) {
+					   coinLayer[i].drawCoins ();
+					   girl.checkForCoinGrab(coinLayer[i]);
+					   coinLayer[i].move ();
+				    }
+				
+				    for (var i = 0; i < laser.length; i ++) {
+					   if (laser[i] == null){
+					       continue;
+					   }
+			
+					   laser[i].drawLaser ();
+					   for (var j=0; j < beanMan.length; j++) {
+					       if (beanMan[j].checkForLaserHit(laser[i])) {
+                            laser[i] = null;
+                            break;
+						  }
+				        }
+                        
+					   if (laser[i] != null)
+						  laser[i].move();
+				    }
+				
+				    if (points != 100){
+				        textSize(30);
+				        text("Score" + ":" + " " + (points), scoreBoardX,40);
+				        text ("Lives" + ":" +" " +lives, scoreBoardX, 90); 
+				    }
+                }
+				
+				else if(lives == 0){
+					fill(255,255,0);
+					textSize(30);
+					text ("Game Over", 440, 440);
+					text ("Final Score" + ":" + " " + (points), 440, 480);
+				}
+
+					
+			}
+			
+		// screen when player whens	
+			else{
+				noStroke();
+				fill(105, 2, 0);
+				ellipse(600,300,1200,850);
+				fill(125, 12, 0);
+				ellipse(600,300,1000,800);
+				fill(150, 32, 0);
+				ellipse(600,300,900,750);
+				fill(175, 42, 0);
+				ellipse(600,300, 950,700);
+				fill(190, 52, 0);
+				ellipse(600,300,900,650);
+				fill(202, 62, 0);
+				ellipse(600,300, 850,600);
+				fill(212, 92, 0);
+				ellipse(600,300,800,550);
+				fill(222, 122, 0);
+				ellipse(600,300,750,500);
+				fill(222, 152, 0);
+				ellipse(600,300,750,450);
+				fill(222, 172, 0);
+				ellipse(600,300,700,400);
+				fill(222, 182, 0);
+				ellipse(600,300,500,275);
+				fill(222, 192, 0);
+				ellipse(600,300,455,325);
+				fill(222, 202, 0);
+				ellipse(600,300,400,300);
+				fill(222, 212, 0);
+				ellipse(600,300,350,275);
+				fill(222, 222, 0);
+				ellipse(600,350,300,250);
+				fill (3, 56, 89);
+				rect (1, 300, 1200, 600);
+				rect (1, 300, 1000, 500);
+ 				building.push(new Building (buildingPositionX, random (100,250), random (35,50), 200, .7, 3, 56, 89));
+				buildingPositionX += 20;
+				for (var i = 0; i <building.length; i ++) {
+					building[i].drawBuilding ();
+					building[i].move ();
+				}
+				document.getElementById("kim").style.display = "none";
+				fill (255,255,0);
+				textSize(30);
+				text ("Congratulations! You saved him!", 400, 450);
+				beanMan.x = -400;
+				laser.xPosition = 1200;
+		
+			}
+		}
+		
+		class Girl{
+			var xPosition;
+			var yPosition;
+			
+			Girl(x,y){
+				xPosition = x;
+				yPosition = y;
+			}
+			
+			boolean checkForLaserHit(laser) {
+                if (xPosition < 0 || yPosition < 435)
+                    return false;
+                    
+                if (Math.abs(x-laser.xPosition) < 5) {
+						yPosition = -450;
+						laser.yPosition = -450;
+						points += 1;
+                        return true;
+				}
+                return false;
+			}
+			
+			boolean checkForCoinGrab(coinLayer){
+				if (coinLayer.x > (xPosition - 5) && coinLayer.x < (xPosition + 5) && coinLayer.y < yPosition +100){
+					coinLayer.y = -400;
+					points += 1;
+				}
+			}
+		}
+			
+		class Building {
+			var xPosition;
+			var yPosition;
+			var width;
+			var height;
+			var speedX;
+			var buildingDistance;
+			
+			Building (PositionX, PositionY, buildingWidth, buildingHeight, xSpeed, buildingRed, buildingGreen, buildingBlue) {
+				xPosition = PositionX;
+				yPosition = PositionY;
+				width = buildingWidth;
+				height = buildingHeight;
+				r = buildingRed;
+				g = buildingGreen;
+				b = buildingBlue;
+				speedX = xSpeed;
+			}
+				
+			void drawBuilding () {
+				noStroke ();
+				fill (buildingRed,buildingGreen, buildingBlue);
+				rect(xPosition, yPosition, width, height);	
+			}
+
+			void move () {
+				xPosition -= speedX;
+				if (xPosition < -10){ 
+                    xPosition = 1600;
+				}
+			}
+		}
+			
+		class Coins {
+			var x;
+			var y;
+			var width;
+			var height;
+			var speedX;
+			
+			Coins (PositionX, PositionY, coinWidth, coinHeight, xSpeed) {
+				x = PositionX;
+				y = PositionY;
+				width = coinWidth;
+				height = coinHeight;
+				speedX = xSpeed;
+			}
+				
+			void drawCoins () {
+				noStroke();
+				fill(250, 240, 47);
+				ellipse(x,y,20,20);
+			}
+			
+			void move () {
+				x -= speedX;
+				if (x < 0){
+					x = 1800;
+				}
+			}
+		}
+	
+		class BeanMan {
+			var x;
+			var y;
+			var speedX;
+			var num;
+			var hasTakenLife = false;
+				
+			BeanMan (PositionX, PositionY, xSpeed) {
+				x = PositionX;
+				y = PositionY;
+				speedX = xSpeed;
+			}
+			//draws the bean man	
+			void drawBean () {
+				stroke (10, 10, 10);
+				strokeWeight (3);
+				fill (240, 221, 125);
+				ellipse (x+5,y+50,40,60);
+				fill (0, 0, 0);
+				ellipse (x,y+10, 25,35);
+				fill (240, 221, 125);
+				ellipse (x, y, 40, 20);
+				triangle (x,y,x-20,y,x,y-20);
+				triangle (x + 10,y,x,y,x,y-20);
+				quad (x-10,y+30,x,y+20,x+20,y+10,x+20,y+30);
+				strokeWeight (6);
+				line (x-3, y+80,x-8, y+95);
+				line (x-8, y+95, x-4, y+110);
+				line (x+12, y+80,x+10, y+95);
+				line (x+10, y+95, x+15, y+110);
+				ellipse (x-10,y+110,7,3);
+				ellipse (x+10, y+110, 7,3);
+				
+			}
+			
+			void move () {
+				x -= speedX;
+				if (x < 150) {
+                    x = 1600;
+                    y = 455;
+				}
+				if (x>400 && x <500){
+                    hasTakenLife = false;
+                }
+			}
+			
+			void changeLives () {
+                    
+                if (!jumped && !hasTakenLife && (x<200)) {
+                    lives -= 1;
+                    hasTakenLife = true;
+                }
+                
+                if (lives == 0) {					
+					//textSize(30);
+					//text ("Game Over", 400, 300);
+					//text ("Final Score" + ":" + " " + (points), 400, 370);
+					backgroundRed = 255;
+					backgroundGreen = 0;
+					backgroundBlue = 0; 
+					buildingRed = 0;
+					buildingGreen = 0;
+					buildingBlue = 0;
+					building.speedX = 0;
+					scoreBoardX = -300;
+					laser.speedX = 0;
+
+                }
+            }
+			
+			boolean checkForLaserHit(laser) {
+                if (x < 0 || y < 435)
+                    return false;
+                    
+                if (Math.abs(x-laser.xPosition) < 5) {
+						x = 1600;
+						laser.yPosition = -450;
+						points += 1;
+                        return true;
+				}
+                return false;
+			}
+		}
+	
+		class Laser {
+			var xPosition;
+			var yPosition;
+			var width;
+			var height;
+			var speedX;
+				
+			Laser (PositionX, PositionY, laserWidth, laserHeight, xSpeed) {
+				xPosition = PositionX;
+				yPosition = PositionY;
+				width = laserWidth;
+				height = laserHeight;
+				speedX = xSpeed;
+			}
+				
+			void drawLaser () {
+				noStroke ();
+				fill (255, 0, 0);
+				rect(xPosition, yPosition, width, height);	
+			}
+
+			void move () {
+				xPosition += speedX;
+			}
+		}
+		
+		</script>
+	</head>
+	<body>
+		<canvas id="teambeyonce"></canvas>
+		<div class="mainstyle">
+		<img src = "kim500.png" id = "kim">
+		</div>
+	</body>
+</html>
