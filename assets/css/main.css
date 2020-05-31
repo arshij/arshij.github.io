@@ -46,7 +46,7 @@
         font-size: 13px;
         text-align: justify;
     }
-    
+
     p.blog {
         font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
@@ -2049,7 +2049,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #47D3E5;
+				background-color:  #FCB8A0;
 			}
 
 			input[type="submit"].special:active,
@@ -4105,7 +4105,6 @@
 			top: 0;
 			left: 0;
 			border-radius: 0;
-			opacity: 0.5;
 		}
 
 			.banner.style5 .image img {
