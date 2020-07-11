@@ -1990,9 +1990,8 @@
 		button.small,
 		.button.small {
 			font-size: 10px;
-			height: 3em;
-			line-height: 3em;
-			border-radius: 3em;
+			height: 2.5em;
+			line-height: 2.5em;
 			padding: 0 2.5em;
 		}
 
@@ -2095,6 +2094,19 @@
 			button.solemate:hover,
 			.button.solemate:hover {
 				background-color:  #FCB8A0;
+			}
+
+			input[type="submit"].drake:hover,
+			input[type="reset"].drake:hover,
+			input[type="button"].drake:hover,
+			button.drake:hover,
+			.button.drake:hover {
+				box-shadow:none !important;
+				color:#ffffff !important;
+				background: #1a2a6c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 			}
 
 			input[type="submit"].special:active,
@@ -8249,7 +8261,7 @@
 				#wrapper > .invert button:hover,
 				#wrapper > .invert .button:hover {
 					box-shadow: inset 0 0 0 1px #47D3E5;
-					color: #47D3E5 !important;
+					color: #47D3E5;
 				}
 
 				#wrapper > .invert input[type="submit"]:active,
