@@ -47,6 +47,17 @@
         text-align: justify;
     }
 
+		p.tags {
+			color: grey;
+			font-size: 12px;
+			font-style: initial;
+			margin: 14px 0 0 0;
+		}
+
+		a.tags {
+			color: grey;
+		}
+
     p.blog {
         font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
@@ -1719,14 +1730,25 @@
 		margin: 0 0 2rem 0;
 	}
 
+	p.projects {
+		font-style: italic;
+		color: grey;
+		font-size: 16px;
+		margin: 0;
+	}
+
+	h3.projects {
+		margin: 0 0 0.5rem 0;
+	}
+
 		p.major {
 			font-size: 1.25rem;
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-weight: 200;
 		line-height: 1.375;
-		letter-spacing: -0.05em;
+		letter-spacing: -0.02em;
 		margin: 0 0 1rem 0;
 	}
 
@@ -1774,7 +1796,6 @@
 
 	blockquote {
 		border-left: solid 4px;
-		font-style: italic;
 		margin: 0 0 2rem 0;
 		padding: 0.5rem 0 0.5rem 2rem;
 	}
@@ -1855,8 +1876,14 @@
 		color: #000000;
 	}
 
-		a:hover {
-			color: #47D3E5;
+		a.link:hover {
+			background: #ee0979;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+		-webkit-text-fill-color:transparent;
 		}
 
 	strong, b {
@@ -1962,11 +1989,11 @@
 		input[type="button"].small,
 		button.small,
 		.button.small {
-			font-size: 0.6rem;
-			height: 3.325em;
-			line-height: 3.325em;
-			border-radius: 3.325em;
-			padding: 0 2em;
+			font-size: 10px;
+			height: 3em;
+			line-height: 3em;
+			border-radius: 3em;
+			padding: 0 2.5em;
 		}
 
 		input[type="submit"].big,
@@ -2039,16 +2066,34 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
+			background-color: #ffffff;
+			box-shadow: 0 0 0 1px lightgrey;
+			color: #000000 !important;
+		}
+
+		.button.special:hover {
+			box-shadow:none;
+			color:#ffffff !important;
+			background: #ee0979;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+
+		input[type="submit"].solemate,
+		input[type="reset"].solemate,
+		input[type="button"].solemate,
+		button.Solemate,
+		.button.solemate {
 			background-color: #000000;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
 
-			input[type="submit"].special:hover,
-			input[type="reset"].special:hover,
-			input[type="button"].special:hover,
-			button.special:hover,
-			.button.special:hover {
+			input[type="submit"].solemate:hover,
+			input[type="reset"].solemate:hover,
+			input[type="button"].solemate:hover,
+			button.solemate:hover,
+			.button.solemate:hover {
 				background-color:  #FCB8A0;
 			}
 
@@ -2531,6 +2576,28 @@
 			padding-left: 0.5rem;
 		}
 
+		ul.about {
+			list-style: none;
+			margin-left: 0;
+			padding-left: 1em;
+			text-indent: -1.5em;
+		}
+
+		@media only screen and (max-width: 600px) {
+			ul.about {
+				list-style: none;
+				margin-left: 0;
+				padding-left: 1em;
+				text-indent: -2.0em;
+			}
+
+		}
+
+		ul.about li {
+			font-size:15px;
+			text-align: left;
+		}
+
 		ul.alt {
 			list-style: none;
 			padding-left: 0;
@@ -2565,6 +2632,8 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			padding-top: 15px;
+			margin:0;
 		}
 
 			ul.actions li {
@@ -2631,7 +2700,7 @@
 			@media screen and (max-width: 480px) {
 
 				ul.actions {
-					margin: 0 0 2rem 0;
+					margin: 0;
 				}
 
 					ul.actions li {
@@ -7998,7 +8067,7 @@
 /* Index */
 
 	.index > * {
-		padding: 3rem 0 1rem 0 ;
+		padding: 1rem 0 1rem 0 ;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -8065,7 +8134,7 @@
 	}
 
 	.index > * {
-		border-top-color: rgba(0, 0, 0, 0.2);
+		border-top-color: white;
 	}
 
 /* Wrapper */
@@ -8089,8 +8158,54 @@
 				color: #ffffff;
 			}
 
-				#wrapper > .invert a:hover {
-					color: #47D3E5;
+				#wrapper > .invert a.link:hover {
+					background: #ee0979;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+	 			-webkit-text-fill-color:transparent;
+				}
+
+				#wrapper > .invert a.linkedin:hover {
+					background: #00B4DB;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to top, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to top, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+				-webkit-text-fill-color:transparent;
+				}
+
+				#wrapper > .invert a.spotify:hover {
+					background: #00b09b;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to top, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to top, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color:transparent;
+				}
+
+				#wrapper > .invert a.github:hover {
+					background: #fc4a1a;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+				-webkit-text-fill-color:transparent;
+				}
+
+				#wrapper > .invert a.twitter:hover {
+					background: #00d2ff;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to bottom, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+	 			-webkit-text-fill-color:transparent;
 				}
 
 			#wrapper > .invert strong, #wrapper > .invert b {
