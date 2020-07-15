@@ -43,7 +43,7 @@
 	}
 
     p.projects {
-        font-size: 14px !important;
+        font-size: 13px;
         text-align: justify;
     }
 
@@ -8214,6 +8214,16 @@ background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/
 					background: #00d2ff;  /* fallback for old browsers */
 					background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
 					background: linear-gradient(to bottom, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+	 			-webkit-text-fill-color:transparent;
+				}
+
+				#wrapper > .invert a.email:hover {
+					background: #00C9FF;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to bottom, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to bottom, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 					-webkit-background-clip: text;
 					-moz-background-clip: text;
 					background-clip: text;
