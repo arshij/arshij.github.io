@@ -42,8 +42,19 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	p.about {
+		font-size: 16px !important;
+		text-align: justify;
+		margin: 0 0 0.5rem 0;
+	}
+
+	h4.projects {
+		font-size: 16px !important;
+		margin-bottom: 5px;
+	}
+
     p.projects {
-        font-size: 14px !important;
+        font-size: 16px !important;
         text-align: justify;
     }
 
@@ -1730,13 +1741,6 @@
 		margin: 0 0 2rem 0;
 	}
 
-	p.projects {
-		font-style: italic;
-		color: grey;
-		font-size: 16px;
-		margin: 0;
-	}
-
 	h3.projects {
 		margin: 0 0 0.5rem 0;
 	}
@@ -1826,6 +1830,14 @@
 		border: 0;
 		border-bottom: solid 1px;
 		margin: 2.5rem 0;
+	}
+
+	hr.projects-line {
+		border: 0;
+		border-bottom: lightgrey solid 1px;
+		margin: 0;
+		margin-bottom: 25px;
+		padding: 0;
 	}
 
 		hr.major {
