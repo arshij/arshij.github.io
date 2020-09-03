@@ -48,6 +48,11 @@
 		margin: 0 0 0.5rem 0 !important;
 	}
 
+	h3.projects-header {
+		font-size: 24px !important;
+		font-weight: 400;
+	}
+
 	h4.projects {
 		font-size: 16px !important;
 		margin-bottom: 5px;
