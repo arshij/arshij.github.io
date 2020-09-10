@@ -2095,6 +2095,25 @@
 			background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		}
 
+		input[type="submit"].ggg,
+		input[type="reset"].ggg,
+		input[type="button"].ggg,
+		button.ggg,
+		.button.ggg {
+			background-color: #ffffff;
+			box-shadow: 0 0 0 1px lightgrey;
+			color: #000000 !important;
+		}
+
+		.button.ggg:hover {
+			box-shadow:none !important;
+			color:#ffffff !important;
+			background: #457fca !important; /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #5691c8, #457fca) !important;  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #5691c8, #457fca) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		}
+
 		input[type="submit"].solemate,
 		input[type="reset"].solemate,
 		input[type="button"].solemate,
@@ -8227,6 +8246,16 @@ background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/
 				-webkit-text-fill-color:transparent;
 				}
 
+				#wrapper > .invert a.github-ggg:hover {
+					background: #457fca;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;
+				-webkit-text-fill-color:transparent;
+				}
+
 				#wrapper > .invert a.twitter:hover {
 					background: #00d2ff;  /* fallback for old browsers */
 					background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
@@ -8278,7 +8307,7 @@ background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/
 			#wrapper > .invert button,
 			#wrapper > .invert .button {
 				background-color: transparent;
-				box-shadow: inset 0 0 0 1px white;
+				box-shadow: 0 0 0 1px white;
 				color: #ffffff !important;
 			}
 
@@ -8533,7 +8562,7 @@ background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/
 			}
 
 		#wrapper > .color1 {
-			background-color: #30363d;
+			background-color: #FF9800;
 		}
 
 		#wrapper > .color2 {
