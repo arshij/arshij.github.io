@@ -1641,6 +1641,7 @@
 
 /* Basic */
 
+
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -2763,6 +2764,7 @@ background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/
 						}
 
 						ul.actions li > * {
+							padding-left: 20px;
 							width: 100%;
 							margin: 0 !important;
 						}
@@ -8310,6 +8312,12 @@ background: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/
 				box-shadow: 0 0 0 1px white;
 				color: #ffffff !important;
 			}
+
+		@media screen and (max-width: 480px) {
+			#wrapper > .invert .button {
+				padding-right: 10px;
+			}
+		}
 
 				#wrapper > .invert input[type="submit"]:hover,
 				#wrapper > .invert input[type="reset"]:hover,
