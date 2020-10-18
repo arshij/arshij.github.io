@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Solemate</title>
+
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/scrolling-nav.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/solemate.css">
+  <link rel="stylesheet" href="../css/carousel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Header -->
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img class="about-me" style="width: 100%;" src="../assets/solemate/solemate.png">
+        </div>
+        <div class="col">
+          <h1>Solemate</h1>
+          <h5><i>A music app for runners</i></h5>
+          <p class="header-subtext">Solemate is a mobile application designed to enhance the running
+            experience through music. Our feed-forward algorithm sets the runner's pace by playing
+            music that varies in tempo. By encouraging the user to match their steps to the beat, our
+            application cultivates a run that feels natural and inspires intrinsic motivation, especially
+            for the beginner runner.</p>
+          <div id="btn-container">
+            <a role="button" href="https://www.scu.edu/news-and-events/feature-stories/2019/stories/step-in-time.html" target="_blank" class="btn btn-light btn-primary btn-sm">
+              <img class="btn-img" src="../assets/icons/newspaper-line.svg">
+              <small>WE'RE IN THE NEWS</small>
+            </a>
+            <a role="button" href="https://scholarcommons.scu.edu/cgi/viewcontent.cgi?article=1148&context=cseng_senior" target="_blank" class="btn btn-light btn-primary btn-sm">
+              <img class="btn-img" src="../assets/icons/file-copy-2-line.svg">
+              <small>SENIOR THESIS</small>
+            </a>
+          </div>
+          <div class="case-study">
+            <small>
+              <img class="btn-img" src="../assets/icons/suitcase-line.svg">
+              I recently authored a
+              <a class="special link" href="https://www.notion.so/Solemate-Case-Study-4c07f9c3eb8445b498b543b40f2cde3a" target="_blank">case study</a>
+              and completely redesigned the UI of Solemate.
+            </small>
+        </div>
+        </div>
+        <div class="down">
+          <a href="#howitworks" id="arrow-black" class="nav-link js-scroll-trigger"></a>
+        </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="howitworks" class="bg-light">
+    <div class="container container-about">
+      <div id="row-howitworks" class="row">
+        <div class="how-it-works col-sm-7">
+          <h2>how it works</h2>
+          <p class="description">Runners are encouraged to match the pace of their running with the beat of the music
+            (i.e., if the song has a BPM of 150, the runner's pace must be approximately the same),
+            resulting in an intrinsic and natural running experience. The music will hint the user to walk
+            or run based on the beats per minute (BPM) of the song. As users progress through levels, the
+            duration of the run and the time spent running vs. walking increases. Progress is monitored and
+            presented in the form of data visualization, allowing the user to view their accuracy in matching
+            the beat of the music.</p>
+          <p class="description"><i>Solemate was proudly built with React Native, Firebase, Apple CoreMotion,
+            and the Spotify SDK.</i></p>
+        </div>
+        <div class="fitness col-sm-4">
+          <img style="width: 100%;" src="../assets/solemate/fitness-illustration.png">
+        </div>
+      </div>
+  </section>
+
+  <!-- Showcase -->
+  <section id="showcase">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-lg-12 mx-auto">
+          <h2>fall in love with running</h2>
+          <p class="description">Solemate isn't available on the App Store just yet —
+            in the mean time, check out the product's user interface.
+          </p>
+          <div class="slideshow-container">
+  					<div class="mySlides"><img class="img-slideshow" src="../assets/solemate/showcase/splash.png" style="width:80%"></div>
+            <div class="mySlides"><img class="img-slideshow" src="../assets/solemate/showcase/login.png" style="width:80%"></div>
+            <div class="mySlides"><img class="img-slideshow" src="../assets/solemate/showcase/home.png" style="width:80%"></div>
+            <div class="mySlides"><img class="img-slideshow" src="../assets/solemate/showcase/run.png" style="width:80%"></div>
+            <div class="mySlides"><img class="img-slideshow" src="../assets/solemate/showcase/progress.png" style="width:80%"></div>
+  					<a style="text-decoration: none;" class="prev" onclick="plusSlides(-1)"><img class="prev-key" src="../assets/icons/arrow-left-s-line.svg"></a>
+  					<a style="text-decoration: none;" class="next" onclick="plusSlides(1)"><img class="next-key" src="../assets/icons/arrow-right-s-line.svg"></a>
+  				</div>
+
+  				<div style="text-align:center">
+  					<span class="dot" onclick="currentSlide(1)"></span>
+  					<span class="dot" onclick="currentSlide(2)"></span>
+  					<span class="dot" onclick="currentSlide(3)"></span>
+  					<span class="dot" onclick="currentSlide(4)"></span>
+  					<span class="dot" onclick="currentSlide(5)"></span>
+  				</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <p class="footer m-0 text-center">&copy; Arshi Jujara 2020. Made with ❤️ and ☕️ in SF.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../js/animate-slideshow.js"></script>
+  <script src="../js/scrolling-nav.js"></script>
+</body>

@@ -1,0 +1,32 @@
+.book-title {
+   margin-left: -10px;
+}
+
+.fa-plus, .fa-minus {
+  margin-right: 15px;
+}
+
+.btn-link {
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+}
+
+.btn-link:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+.card-body {
+  font-weight: 300;
+}
+
+.fa-star {
+  color: orange;
+  margin-left: 5px;
+}
+
+.book {
+  margin-bottom: -20px;
+}
