@@ -1,3 +1,7 @@
+.card {
+  border: none;
+}
+
 .card-text {
   font-size: 1rem;
   font-weight: 300;
@@ -12,9 +16,15 @@
   margin-bottom: 20px;
 }
 
+.project-title {
+  text-decoration: underline;
+}
+
 .project-link {
+  text-decoration: none;
   display: inline-block;
   margin-right: 10px;
+  font-size: 14px;
 }
 
 .project-category {

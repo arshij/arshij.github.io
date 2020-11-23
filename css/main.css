@@ -52,7 +52,6 @@ h1 {
 a.special {
   font-weight: 500;
   color: black;
-  text-decoration: underline;
 }
 
 a.special:hover {
@@ -75,7 +74,13 @@ a.special:hover {
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width:350px) and (min-width:300px) {
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .inner {
     top: 50%;
     left: 10%;
