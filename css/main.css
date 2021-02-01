@@ -28,6 +28,10 @@ h1 {
   height: 30px;
 }
 
+#vsco {
+  margin-left: 4px;
+}
+
 .main {
   height: 100%;
 }
