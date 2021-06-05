@@ -1,0 +1,42 @@
+.bg-primary {
+  background-color: white !important;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 100vh;
+  padding: 156px 0 100px;
+  background-image: url('../assets/cover.jpg');
+  background-size: cover;
+  background-position: 85% 50%;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  background-color: transparent;
+  border: none;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
+}
+
+.navbar.solid {
+  background-color: white;
+  color: black;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+
+.navbar-collapse.collapse {
+  display: block !important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+section {
+  padding: 150px 0;
+}

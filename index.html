@@ -9,57 +9,155 @@
 
   <title>Arshi Jujara</title>
   <link rel="icon" type="image/png" href="./assets/fav.png" />
-  <link rel="stylesheet" href="style.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="row">
+<body id="page-top">
 
-    <!-- Navigation -->
-    <div class="column left">
-      <div class="nav">
-        <p class="title">Arshi Jujara</p>
-        <p><a class="link" href="bookshelf.html">Bookshelf</a></p>
-        <p><a class="link" href="https://www.twitter.com/arshizzle98" target="_blank">Twitter</a></p>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#bookshelf">bookshelf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/arshizzle98" target="_blank">twitter</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <!-- About -->
-    <div class="column right">
-      <div class="main">
-        <img width="250" src="assets/profile.png" alt="A picture of Arshi">
-        <strong>
-          <p class="title" style="margin-bottom: -10px">hi, i'm arshi.</p>
-        </strong>
-        <p>I’m a software engineer at <a class="link" href="https://www.twitter.com" target="_blank">Twitter</a>.
-          I care deeply about ethics in engineering and try to incorporate
-          intention-based design into everything I build.</p>
-        <p>I’m from San Francisco and a proud Warriors fan. I attended Santa
-          Clara University for three years, obtaining my bachelor’s in Computer
-          Science & Engineering with a minor in Math.</p>
-        <p>Outside of work, you'll find me playing the piano or guitar,
-          listening to <a href="https://open.spotify.com/playlist/6PbWxf8VR85EezbLO9Fx4n?si=GHUj-gX6SVql5Cup4uJ5_Q" class="link" target="_blank">music</a>
-          or buying sneakers.</p>
-        <p>Reach me on Twitter <a class="link" href="https://www.twitter.com/arshizzle98" target="_blank">@arshizzle98</a>,
-          or connect with <a class="link" href="mailto:me@arshi.com" target="_blank">me@arshi.com.</a></p>
-        <p><a class="link" href="https://www.linkedin.com/in/arshijujara" target="_blank">LinkedIn</a>
-           • <a class="link" href="https://github.com/arshij" target="_blank">GitHub</a>
-           • <a class="link" href="https://vsco.co/arshizzle98" target="_blank">VSCO</a></p>
-        <div class="spacer"></div>
-        <hr class="line">
-        <div class="spacer"></div>
-        <h4 style="margin-bottom: -10px">press + publications</h4>
-        <p><a href="https://www.scu.edu/news-and-events/feature-stories/2019/stories/step-in-time.html" class="plain-link" target="_blank">Santa Clara University News</a>,
-          <a href="https://scholarcommons.scu.edu/cgi/viewcontent.cgi?article=1148&context=cseng_senior" class="plain-link" target="_blank">Santa Clara University Scholar Commons</a>,
-          <a href="https://www.scu.edu/real/stories/student-trio-launches-scu-cisco-internship-collaboration.html" class="plain-link" target="_blank">College of Arts & Sciences - Santa Clara University</a>.
-        </p>
+  <!-- Header -->
+  <header id="header" class="bg-primary text-white">
+    <div class="container main text-left">
+      <div class="inner">
+        <h1>arshi jujara</h1>
+        <p class="tag">engineer @ twitter</p>
+        <a href="https://www.linkedin.com/in/arshijujara" target="_blank" class="social" id="linkedin"></a>
+        <a href="https://github.com/arshij" target="_blank" class="social" id="github"></a>
+        <a href="https://twitter.com/arshizzle98" target="_blank" class="social" id="twitter"></a>
+        <a href="mailto:me@arshi.com" target="_blank" class="social" id="mail"></a>
+        <a href="https://vsco.co/arshizzle98" target="_blank" class="social" id="vsco"><img width="23" src="./assets/icons/vsco.svg"></a>
       </div>
-      <div class="footer">
-        <p style="float:left">© Arshi Jujara 2021</p>
-        <p style="float:right"><a class="footer-link" href="https://www.twitter.com/arshizzle98" target="_blank">@arshizzle98</a></p>
+      <div class="down">
+        <a href="#about" id="arrow" class="nav-link js-scroll-trigger"></a>
       </div>
     </div>
-  </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="bg-light">
+    <div class="wrapper">
+      <img class="about-me" width="300px" src="assets/profile.png">
+      <h2>hi, i'm arshi.</h2>
+
+      <p class="about-text">I’m a software engineer at <a class="special" href="https://www.twitter.com" target="_blank">Twitter</a>.
+        I care deeply about ethics in engineering and try to incorporate
+        intention-based design into everything I build.</p>
+
+      <p class="about-text">I’m from San Francisco and a proud Warriors fan. I attended Santa
+        Clara University for three years, obtaining my bachelor’s in Computer
+        Science & Engineering with a minor in Math.</p>
+      <p>
+
+      <p class="about-text">Outside of work, you'll find me playing the piano or guitar,
+        listening to <a href="https://open.spotify.com/playlist/6PbWxf8VR85EezbLO9Fx4n?si=GHUj-gX6SVql5Cup4uJ5_Q" class="special" target="_blank">music</a>
+        or buying sneakers.
+      </p>
+
+      <p class="about-text">Reach me on Twitter <a class="special" href="https://www.twitter.com/arshizzle98" target="_blank">@arshizzle98</a>,
+        or connect with <a class="special" href="mailto:me@arshi.com" target="_blank">me@arshi.com</a>.
+      </p>
+
+      <div class="spacer"></div>
+      <hr class="line">
+      <div class="spacer2"></div>
+
+      <h4>press + publications</h4>
+      <p class="about-text"><a href="https://www.scu.edu/news-and-events/feature-stories/2019/stories/step-in-time.html" class="special" target="_blank">Santa Clara University News</a>,
+        <a href="https://scholarcommons.scu.edu/cgi/viewcontent.cgi?article=1148&context=cseng_senior" class="special" target="_blank">Santa Clara University Scholar Commons</a>,
+        <a href="https://www.scu.edu/real/stories/student-trio-launches-scu-cisco-internship-collaboration.html" class="special" target="_blank">College of Arts & Sciences - Santa Clara University</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Bookshelf -->
+  <section id="bookshelf">
+    <div class="wrapper">
+      <h2>bookshelf</h2>
+
+      <div class="spacer"></div>
+
+      <p class="quote">If you love to read, or learn to love reading, you will have an
+        amazing life. Period. Life will always have hardships, pressure, and
+        incredibly annoying people, but books will make it all worthwhile.
+        In books, you will find your North Star, and you will find you, which
+        is why you are here. <a class="special" href="https://www.amazon.com/Velocity-Being-Letters-Young-Reader/dp/1592702287" target="_blank">-Anne Lamott</a></p>
+
+      <p>Here are some books that have allowed me to live my life with
+        intention and purpose. Books in bold have impacted my life deeply.
+
+        I get much more value out of these if I have a conversation with others,
+        so I’m always open to discuss thoughts. I'd love to hear from you if
+        you have any recommendations as well.</p>
+
+      <div class="spacer"></div>
+      <hr class="line">
+      <div class="spacer2"></div>
+
+      <p class="star">Deep Work: Rules for Focused Success in a Distracted World, <i>Cal Newport</i></p>
+      <p>The Design of Everyday Things, <i>Don Norman</i></p>
+      <p class="star">The Inner Game of Tennis, <i>Timothy Gallwey</i></p>
+      <p>The Grapes of Math: How Life Reflects Numbers and Numbers Reflect Life, <i>Alex Bellos</i></p>
+      <p>Digital Minimalism, <i>Cal Newport</i></p>
+      <p>How to Be an Antiracist, <i>Ibram X. Kendi</i></p>
+      <p class="star">The Subtle Art of Not Giving A F*ck, <i>Mark Manson</i></p>
+      <p>Everything is F*cked, <i>Mark Manson</i></p>
+      <p>Atomic Habits, <i>James Clear</i></p>
+      <p class="star">The Butterfly Effect: How Kendrick Lamar Ignited the Soul of Black America, <i>Marcus J. Moore</i></p>
+      <p>So Good They Can't Ignore You, <i>Cal Newport</i>
+      <p class="star">Zero to One: Notes on Startups, or How to Build the Future, <i>Peter Thiel</i></p>
+      <p class="star">Shoe Dog: A Memoir by the Creator of Nike, <i>Phil Knight</i></p>
+      <p class="star">Hatching Twitter: A True Story of Money, Power, Friendship, and Betrayal, <i>Nick Bilton</i></p>
+      <p>Ego Is the Enemy, <i>Ryan Holiday</i>
+      <p>Future Ethics, <i>Cennydd Bowles</i>
+      <p>Sapiens, <i>Yuval Noah Harari</i>
+      <p>A World Without Email, <i>Cal Newport</i>
+      <p class="star">Think Like a Monk, <i>Jay Shetty</i>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-light">
+    <div class="wrapper">
+      <p style="float:left">© Arshi Jujara 2021</p>
+      <p style="float:right"><a href="https://www.twitter.com/arshizzle98" target="_blank">@arshizzle98</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/animate.js"></script>
 </body>
 
 </html>
