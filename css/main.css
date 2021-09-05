@@ -29,6 +29,21 @@
   src: url("../assets/fonts/SF-Pro-Text-Thin.otf") format("opentype");
 }
 
+@font-face {
+  font-family: 'Apple';
+  src: url("../assets/fonts/AppleGaramond.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Apple-Light';
+  src: url("../assets/fonts/AppleGaramond-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Apple-Bold';
+  src: url("../assets/fonts/AppleGaramond-Bold.ttf") format("truetype");
+}
+
 a.special {
   font-family: "SF-Regular", sans-serif;
   color: black;
@@ -44,17 +59,17 @@ a.special:hover {
   -webkit-text-fill-color: transparent;
 }
 
-#about, #bookshelf {
+#about, #bookshelf, #work {
   padding: 90px;
 }
 
 #bookshelf {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
 .about-text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -134,12 +149,17 @@ h2, h4 {
 }
 
 .star {
-  font-family: "SF-Bold"
+  font-family: "SF-Bold";
 }
 
 .star-i {
   font-family: "SF-Bold-Italic"
 }
+
+.subtitle {
+  font-family: 'Apple', sans-serif;
+}
+
 
 .subtext {
   font-size: 1rem;
@@ -149,6 +169,11 @@ h2, h4 {
 .tag {
   font-weight: normal;
   font-size: 1.25rem;
+}
+
+.title {
+  font-family: 'Apple-Light', sans-serif;
+  font-weight: normal;
 }
 
 .wrapper {
@@ -162,7 +187,7 @@ h2, h4 {
 
 @media (max-width:350px) and (min-width:300px) {
 
-  .about-text, #bookshelf {
+  .about-text, #bookshelf, #work {
     font-size: 14px;
   }
 
@@ -173,7 +198,7 @@ h2, h4 {
 
 @media screen and (max-width: 750px) {
 
-  #about, #bookshelf {
+  #about, #bookshelf, #work {
     padding: 50px 0 40px 0;
   }
 
@@ -214,7 +239,7 @@ h2, h4 {
 }
 
 @media screen and (max-width: 650px) {
-  #about, #bookshelf {
+  #about, #bookshelf, #work {
     padding: 50px 0 40px 0;
   }
 
@@ -225,7 +250,7 @@ h2, h4 {
 }
 
 @media screen and (max-width: 500px) {
-  #about, #bookshelf {
+  #about, #bookshelf, #work {
     padding: 50px 0 40px 0;
   }
 
