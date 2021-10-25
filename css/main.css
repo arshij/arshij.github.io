@@ -143,8 +143,8 @@ h2, h4 {
 }
 
 .social {
-  display: inline-flex;
-  height: 25px;
+  display: inline-block;
+  height: 30px;
 }
 
 .spacer {
