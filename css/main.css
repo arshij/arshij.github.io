@@ -143,8 +143,8 @@ h2, h4 {
 }
 
 .social {
-  display: inline-flex;
-  height: 30px !important;
+  display: table-cell;
+  height: 30px;
 }
 
 .spacer {
@@ -190,7 +190,7 @@ h2, h4 {
 }
 
 #vsco {
-  margin-left: 4px;
+  padding-left: 6px;
 }
 
 @media (max-width:350px) and (min-width:300px) {
