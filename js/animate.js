@@ -1,26 +1,5 @@
 var directionMenu = 1;
 
-/* animate linkedin icon */
-// let linkedin = document.getElementById('linkedin')
-//
-// let linkedinLogo = bodymovin.loadAnimation({
-//   container: linkedin,
-//   renderer: 'svg',
-//   loop: false,
-//   autoplay: false,
-//   path: "./assets/animate-icons/linkedin.json"
-// });
-//
-// linkedin.addEventListener('mouseenter', (e) => {
-//   linkedinLogo.setDirection(directionMenu);
-//   linkedinLogo.play();
-// });
-//
-// linkedin.addEventListener('mouseleave', (e) => {
-//   linkedinLogo.setDirection(-directionMenu);
-//   linkedinLogo.play();
-// });
-
 /* animate github icon */
 let github = document.getElementById('github')
 
