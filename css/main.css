@@ -49,7 +49,7 @@ a.special {
   color: black;
 }
 
-a.special:hover {
+a.special:hover, a.blog-link:hover {
   background: #ee0979;
   background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
   background: linear-gradient(to right, #ff6a00, #ee0979);
@@ -59,16 +59,11 @@ a.special:hover {
   -webkit-text-fill-color: transparent;
 }
 
-#about, #bookshelf, #work {
+#about, #highlights {
   padding: 90px;
 }
 
-#bookshelf {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.about-text {
+.small-text {
   font-size: 14px;
   line-height: 1.7;
 }
@@ -81,6 +76,15 @@ a.special:hover {
 
 b {
   font-weight: 400;
+}
+
+.blog-heading {
+  height: 40px;
+}
+
+.blog-link {
+  font-family: 'Apple', sans-serif;
+  color: black;
 }
 
 body {
@@ -101,6 +105,11 @@ h1 {
 
 h2, h4 {
   font-family: "SF-Regular", sans-sans-serif;
+}
+
+#highlights {
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .icon {
@@ -160,7 +169,6 @@ h2, h4 {
   font-family: 'Apple', sans-serif;
 }
 
-
 .subtext {
   font-size: 1rem;
   font-weight: 300;
@@ -187,7 +195,7 @@ h2, h4 {
 
 @media (max-width:350px) and (min-width:300px) {
 
-  .about-text, #bookshelf, #work {
+  .small-text, #highlights {
     font-size: 14px;
   }
 
@@ -198,7 +206,7 @@ h2, h4 {
 
 @media screen and (max-width: 750px) {
 
-  #about, #bookshelf, #work {
+  #about, #highlights {
     padding: 50px 0 40px 0;
   }
 
@@ -209,7 +217,7 @@ h2, h4 {
     padding-bottom: 40px;
   }
 
-  .about-text {
+  .small-text {
     text-align: left !important;
   }
 
@@ -239,7 +247,7 @@ h2, h4 {
 }
 
 @media screen and (max-width: 650px) {
-  #about, #bookshelf, #work {
+  #about, #highlights {
     padding: 50px 0 40px 0;
   }
 
@@ -250,7 +258,7 @@ h2, h4 {
 }
 
 @media screen and (max-width: 500px) {
-  #about, #bookshelf, #work {
+  #about, #highlights {
     padding: 50px 0 40px 0;
   }
 
