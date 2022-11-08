@@ -147,6 +147,11 @@ h2, h4 {
   height: 30px;
 }
 
+.social-links {
+  padding-left:0px;
+  margin-left:-4px;
+}
+
 .spacer {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -232,7 +237,7 @@ h2, h4 {
   }
 
   .down {
-    left: 45% !important;
+    left: 40% !important;
     top: 85% !important;
   }
 
